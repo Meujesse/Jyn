@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Slider</title>
+
+    <!-- Inclusion du CSS de noUiSlider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #slider-range {
+            margin: 50px auto;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider-range"></div>
+
+    <!-- Inclusion du script JavaScript de noUiSlider -->
+    <script src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js"></script>
+    <script>
+        // Initialisation du slider
+        var rangeSlider = document.getElementById('slider-range');
+        noUiSlider.create(rangeSlider, {
+            start: [4000],
+            range: {
+                'min': [2000],
+                'max': [10000]
+            }
+        });
+    </script>
+</body>
+
+</html>
