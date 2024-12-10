@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider Minimaliste</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    #slider-step {
+      margin: 50px auto;
+      width: 80%;
+    }
+    .noUi-value, .noUi-tooltip {
+      display: none !important; /* Masquer les valeurs */
+    }
+  </style>
+</head>
+<body>
+  <div id="slider-step"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js"></script>
+  <script>
+    var stepSlider = document.getElementById('slider-step');
+
+    // Création du slider avec 5 crans uniformément répartis
+    noUiSlider.create(stepSlider, {
+      start: [1], // Position initiale
+      step: 1,    // Chaque cran représente une étape
+      range: {
+        'min': 1,   // Étape 1
+        '25%': 2,   // Étape 2
+        '50%': 3,   // Étape 3
+        '75%': 4,   // Étape 4
+        'max': 5    // Étape 5
+      },
+      snap: true // Forcer le curseur à s'aligner sur les crans
+    });
+  </script>
+</body>
+</html>
